@@ -1,0 +1,44 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+
+import org.junit.jupiter.api.Test;
+
+class WordPlayUnitTests3 {
+
+	WordPlay wordPlay = new WordPlay();
+
+	// Task 1
+	@Test
+	void testWhatComesFirst() {
+		assertEquals("ant comes before zebra in the alphabet", wordPlay.whatComesFirst("ant", "zebra"));
+		assertEquals("ant comes before bee in the alphabet", wordPlay.whatComesFirst("bee", "ant"));
+		assertEquals("ant is the same as ant", wordPlay.whatComesFirst("ant", "ant"));
+		assertEquals("ANT is the same as ant", wordPlay.whatComesFirst("ANT", "ant"));
+	}
+
+	// Task 2
+	@Test
+	void testBackwardsString() {
+		assertEquals("einaleM", wordPlay.backwardsString("Melanie"));
+		assertEquals("c", wordPlay.backwardsString("c"));
+		assertEquals("", wordPlay.backwardsString(""));
+		assertEquals("54321", wordPlay.backwardsString("12345"));
+		assertEquals("This is programming!", wordPlay.backwardsString("!gnimmargorp si sihT"));
+
+	}
+
+	// Task 3
+	@Test
+	void testAddressBook() {
+		String[] names = { "Tom", "Dick", "Harry" };
+		String[] numbers = { "0111", "0554", "4532" };
+		String[] book = { "Tom 0111", "Dick 0554", "Harry 4532" };
+		assertArrayEquals(book, wordPlay.addressBook(names, numbers));
+		String[] names1 = { "Melanie", "Ruth", "Heather" };
+		String[] numbers1 = { "01202 961120", "01202 965555", "01202 961223" };
+		String[] book1 = { "Melanie 01202 961120", "Ruth 01202 965555", "Heather 01202 961223" };
+		assertArrayEquals(book1, wordPlay.addressBook(names1, numbers1));
+	}
+
+}
