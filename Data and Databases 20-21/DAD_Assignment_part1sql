@@ -1,0 +1,298 @@
+
+--Create scripts
+
+--creating table: food item
+CREATE TABLE food_item_tbl (
+	food_id varchar2(10),
+    food_name varchar2(50),
+    food_price number(6,2),
+	num_of_ingredient number(),
+    dietary_consideration varchar2(100),
+    date_added DATE,
+    constraint food_pk PRIMARY KEY (food_id)
+);
+
+--creating table: dish
+CREATE TABLE dish_tbl (
+	dish_id varchar2(10),
+	dish_name varchar2(50),
+	dish_description varchar2(100),
+	fk_food_id varchar2(10),
+	constraint dish_pk PRIMARY KEY (dish_id)
+);
+
+--creating table: ingredient
+CREATE TABLE ingredient_tbl (
+	ingredient_id varchar2(10),
+	ingredient_name varchar2(50),
+	constraint ingredient_pk PRIMARY KEY (ingredient_id),															-----------
+);
+
+--creating table: allergen 
+CREATE TABLE allergen_tbl (
+	allergen_id varchar2(10),
+	allergen_description varchar2(100),
+	constraint allergen_pk PRIMARY KEY (allergen_id)
+);
+
+--creating a link table for table dish and table food item
+CREATE TABLE dish_food_item_link_tbl (
+	dish_food_item_id varchar2(10),
+	fk_food_id varchar2(10),
+	fk_dish_id varchar2(10),
+	constraint dish_food_item_pk PRIMARY KEY (dish_food_item_id),
+	constraint FI_to_Di_food_id_fk FOREIGN KEY (fk_food_id) REFERENCES food_item_tbl(food_id),	--Foreign key from food item table
+	constraint Di_to_FI_dish_id_fk FOREIGN KEY (fk_dish_id) REFERENCES dish_tbl(dish_id)		--Foreign key from dish table
+);
+
+--creating a link table for table food item and table ingredient
+CREATE TABLE food_item_ingredient_link_tbl (
+	food_item_ingredient_id varchar2 (10),
+	fk_food_id varchar2 (10),
+	fk_ingredient_id varchar2 (10),
+	constraint food_item_ingredient_pk PRIMARY KEY (food_item_ingredient_id),
+	constraint FI_to_Ingr_food_id_fk FOREIGN KEY (fk_food_id) REFERENCES food_item_tbl(food_id),--Foreign key from food item table
+	constraint Ingr_to_FI_ingredient_id_fk FOREIGN KEY (fk_ingredient_id) REFERENCES ingredient_tbl(ingredient_id)--Foreign key from ingredient table
+);
+
+--creating a link table for table ingredient and table allergen
+CREATE TABLE ingredient_allergen_link_tbl (																--error
+	ingredient_allergen_id varchar2 (10),
+	fk_allergen_id varchar2 (10),
+	fk_ingredient_id varchar2 (10),
+	constraint allergen_ingredient_pk PRIMARY KEY (ingredient_allergen_id),
+	constraint Al_to_Ingr_allergen_id_fk FOREIGN KEY (fk_allergen_id) REFERENCES allergen_tbl(allergen_id),--Foreign key from allergen table
+	constraint Ingr_to_Al_ingredient_id_fk FOREIGN KEY (fk_ingredient_id) REFERENCES ingredient_tbl(ingredient_id)--Foreign key from ingredient table
+);
+
+commit;
+--Insert scripts
+
+--inserting to dish table with primary key food id, food name, food description and foreign key food id
+insert into dish_tbl values(
+'d001',
+'Beans on toast',
+'Rich tomato sauce over soft beans smothered over freshly buttered toast.',
+'f001'
+);
+insert into dish_tbl values(
+'d002',
+'Fried eggs',
+'Fried eggs are a easy way to add protein to all kinds of meals.',
+'f002'
+);
+insert into dish_tbl values(
+'d003',
+'Creamed Corn',
+'Creamed corn is a classic dish perfect for eating as a side along with some barbecue.',
+'f003'
+);
+insert into dish_tbl values(
+'d004',
+'Peanut Pie',
+'This pie is inspired by  served at the Virginia Diner.Which is  renowned for this dessert.',
+'f005'
+);
+insert into dish_tbl values(
+'d005',
+'Lobster Roll',
+'Lobster roll filled with juicy, succulent lobsters and mayo. So delicious!',
+'f007'
+);
+insert into dish_tbl values(
+'d006',
+'Butter Roasted Chestnuts',
+'Roasted chestnut is a popular autumn and winter street food in East Asia, Europe, and New York City.',
+'f008'
+);
+insert into dish_tbl values(
+'d008',
+'Fish & Chips',
+'Fish and chips is a hot dish consisting of fried fish in batter served with chips.',
+'f006'
+);
+insert into dish_tbl values(
+'d007',
+'cheese',
+'Fish and chips is a hot dish consisting of fried fish in batter served with chips.',
+'f004'
+);
+
+--inserting to food item table with food item id, name, price, number of ingredient, consideration and date added
+insert into food_item_tbl values(
+'f001',
+'toast',
+'5',
+'10',
+'Nutrients are limited, you can’t just eat toast at every meal.',
+'09-Jun-20'
+);
+insert into food_item_tbl values(
+'f002',
+'eggs',
+'2',
+'6',
+'rich in protein and has high nutritional value, but not advisable to eat more than two eggs a day',
+'05-Jun-20'
+);
+insert into food_item_tbl values(
+'f003',
+'corn',
+'6',
+'9',
+'Corn has high nutritional value, but because it contains a lot of plant fiber, it is not recommended for the elderly and children',
+'05-Feb-20'
+);
+insert into food_item_tbl values(
+'f004',
+'milk',
+'5',
+'7',
+'People with lactose intolerance are not recommended to drink milk because it will cause diarrhea',
+'05-Mar-20'
+);
+insert into food_item_tbl values(
+'f005',
+'peanut',
+'7',
+'11',
+'you should know whether you have Nut allergies before eating',
+'05-Sep-20'
+);
+insert into food_item_tbl values(
+'f006',
+'fish',
+'10',
+'8',
+'Fish and chips is a hot dish consisting of fried fish in batter served with chips.',
+'25-July-20'
+);
+insert into food_item_tbl values(
+'f007',
+'lobster and cabbage',
+'25',
+'10',
+'Lobster contains a lot of protein and is not recommended for elderly people with high cholesterol',
+'25-July-20'
+);
+
+insert into food_item_tbl values(
+'f008',
+'chestnut',
+'4',
+'10',
+'the allergen responsible for the reaction is likely to be one of the lipid transfer proteins (LTPs).',
+'05-Jun-20'
+);
+
+--inserting to ingredient table with ingredient id, name, foreign key allergen id
+insert into ingredient_tbl values(
+'ingr001',
+'barley',
+'a001');
+insert into ingredient_tbl values(
+'ingr002',
+'phosphorus,zinc,iron,protein,vitamin D',
+'a002');
+insert into ingredient_tbl values(
+'ingr003',
+'whey protein,casein,beta-lactoglobulin,gamma-lactalbumin,etc',
+'a003');
+insert into ingredient_tbl values(
+'ingr004',
+'Moisture, protein, fat, sugar, vitamin A,etc',
+'a004');
+insert into ingredient_tbl values(
+'ingr005',
+'Magnesium, potassium, vitamin A',
+'a005');
+insert into ingredient_tbl values(
+'ingr006',
+'cabbage',
+'a006');
+insert into ingredient_tbl values(
+'ingr007',
+'Calcium, sodium, potassium, magnesium, phosphorus,etc',
+'a007');
+insert into ingredient_tbl values(
+'ingr008',
+'chestnut',
+'a008');
+
+
+--inserting to allergen table with allergen id and description
+insert into allergen_tbl values(
+'a001',
+'Barley is an important factor that causes allergies in some people'
+);
+insert into allergen_tbl values(
+'a002',
+'Some people''s allergies to eggs are nausea and vomiting'
+);
+insert into allergen_tbl values(
+'a003',
+'May cause an abnormal response by the body''s immune system to milk and products containing milk.'
+);
+insert into allergen_tbl values(
+'a004',
+'Peanut pie may cause Nut allergies, which are when your body’s immune system overreacts to the proteins found in nuts. Your body treats them as a potential threat and tries to fight them off. Therefore, you should know whether you have Nut allergies before eating'
+);
+insert into allergen_tbl values(
+'a005',
+'Some of the chemicals in chocolate including soy lecithin, which Cause an allergic reaction.'
+);
+insert into allergen_tbl values(
+'a006',
+'A large number of vegetables like celery have been reported to cause allergic reactions'
+);
+insert into allergen_tbl values(
+'a007',
+'If your mouth itches, or if you develop hives or a stomachache after eating crab, lobster or other shellfish, you may have a shellfish allergy, a condition that affects nearly 7 million Americans.'
+);
+insert into allergen_tbl values(
+'a008',
+'In cases of severe allergy to chestnut, which are rare, the allergen responsible for the reaction is likely to be one of the lipid transfer proteins (LTPs).'
+);
+insert into allergen_tbl values(
+'a009',
+'Legumes are a family of foods including peas, beans, ect. Some people are only allergic to one or two kinds of beans.'
+);
+insert into allergen_tbl values(
+'a010',
+'Wheat powder can contain Sulphites, which can cause mild allergies in some people'
+);
+insert into allergen_tbl values(
+'a011',
+'molluscs such as mussels and oysters may cause allergic reaction'
+);
+insert into allergen_tbl values(
+'a012',
+'Some people are allergic to fish because they lack the enzyme that can break down histamine in fish.'
+);
+insert into allergen_tbl values(
+'a013',
+'Sesame is a hard to detect allergen.'
+);
+insert into allergen_tbl values(
+'a014',
+'A few people are allergic to mustard'
+);
+
+
+--Select scripts
+select * from food_item_tbl;
+select * from dish_tbl;
+select * from ingredient_tbl;
+select food_name, count(*) from food_item_tbl group by ingredient_name;
+select MAX(num_of_ingredient) from food_item_tbl;
+
+
+--Drop scripts
+drop table food_item_tbl;
+drop table dish_tbl;
+drop table ingredient_tbl;
+drop table allergen_tbl;
+drop table dish_food_item_link_tbl;
+drop table food_item_ingredient_link_tbl;
+drop table allergen_ingredient_link_tbl;
+commit;
