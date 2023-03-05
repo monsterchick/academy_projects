@@ -1,0 +1,85 @@
+body{
+    background: rgb(227, 220, 230);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header{
+    border-style: solid;
+    border-width: 2px;}
+
+button{
+    width: 80px;
+}
+
+#bannerMain{
+    width: 100%;
+} 
+#divContent{
+    display: flex;
+    flex: 1;
+}
+#sectionMain{
+    padding: 2px;
+    border-style: solid;
+    border-width: 1px;
+    flex-grow: 1;
+}
+#studentcode{
+    padding: 2px;
+    border-style: inset;
+    border-width: 3px;
+    background-color: #ccc;
+}
+#practicearea{
+    padding: 2px;
+    border-style: inset;
+    border-width: 3px;
+    background-color: #ccc;
+}
+
+#asideMain{
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+    flex: 0 0 12em;
+    margin-left: auto;
+}
+#footerMain{
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+}
+
+#navFooter{
+    display: flex;
+    justify-content: center;
+}
+
+#navFooter a{
+    align-items: center;
+    text-align: center;
+    padding: 0px 16px;
+}
+#navMain {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+#navMain a{
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change the link color to #111 (black) on hover */
+#navMain a:hover {
+  background-color: #111;
+}
+
+#jsontable {
+  border: 1px solid black;
+  background-color: aqua;
+}

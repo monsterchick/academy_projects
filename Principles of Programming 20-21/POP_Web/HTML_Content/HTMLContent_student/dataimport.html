@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <?xml version="1.0" encoding="UTF-8"?>
+<head>
+    <title>Data Import Tests</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navMain">
+            <a href="index.html">Home</a> |
+            <a href="wwwintro.html">WWW Intro</a> |
+            <a href="htmlstructure.html">HTML Structure</a> |
+            <a href="htmlcontent.html">HTML Content</a> |
+            <a href="dataimport.html">Data Import Formats</a> |
+            <a href="csspart1.html">CSS Part 1</a> |
+            <a href="csspart2.html">CSS Part 2</a> |
+            <a href="design.html">Design Issues</a>
+        </nav>
+
+    </header>
+    <div id="divContent">
+        <section id="sectionMain">
+            <h1>Data Import</h1>
+            <label for="inputXML">Load XML</label>
+            <input type="file" id="inputXML">
+            <label for="inputJSON">Load JSON</label>
+            <input type="file" id="inputJSON">
+            <label for="inputCSV">LoadCSV</label>
+            <input type="file" id="inputCSV" accept=".csv">
+            <p id="scode">Select files using the above buttons to load data into the Student Code section. Once loaded press the '"Run Tests"' button to see if you have updated the data files correctly.
+                Note that you will only be able to do this once and tests will only pass if the relevant data file has been loaded.
+                Reload the page to test again.</p>
+            
+            
+            <section id="studentcode">
+                <h2>Student Code</h2>
+                <div id="xmlData"></div>
+                <div id="jsonData"></div>
+                <div id="csvData"></div>
+            </section>
+            <button id="btnQUnit">Run Tests</button>
+        </section>
+        <aside id="asideMain">
+            <div id="divAsideHeight">
+                <h2>Tips/Links</h2>
+                <p>The ...</p>
+            </div>
+        </aside>
+    </div>
+    
+    <input type="hidden" id="xmlOK" value="false">
+    <input type="hidden" id="jsonOK" value="false">
+    <input type="hidden" id="csvOK" value="false">
+    <script src="scripts/dataimport.js"></script>
+
+    <footer id="footerMain">
+        <nav id="navFooter">
+            <a href="index.html">Home</a> |
+            <a href="wwwintro.html">WWW Intro</a> |
+            <a href="htmlstructure.html">HTML Structure</a> |
+            <a href="htmlcontent.html">HTML Content</a> |
+            <a href="dataimport.html">Data Import Formats</a> |
+            <a href="csspart1.html">CSS Part 1</a> |
+            <a href="csspart2.html">CSS Part 2</a> |
+            <a href="design.html">Design Issues</a>
+        </nav>
+    </footer>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+    <script src="scripts/testData.js"></script>
+    
+</body>
+
+</html>

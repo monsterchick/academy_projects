@@ -1,0 +1,49 @@
+
+
+[
+   {
+      "@category": "cooking",
+      "title": {
+         "@lang": "en",
+         "#text": "Everyday Italian"
+      },
+      "author": "Giada De Laurentiis",
+      "year": "2005",
+      "price": "30.00"
+   },
+   {
+      "@category": "children",
+      "title": {
+         "@lang": "en",
+         "#text": "Harry Potter"
+      },
+      "author": "J K. Rowling",
+      "year": "2005",
+      "price": "29.99"
+   },
+
+   {
+      "@category": "web",
+      "@cover": "paperback",
+      "title": {
+         "@lang": "en",
+         "#text": "Learning XML"
+      },
+      "author": "Erik T. Ray",
+      "year": "2003",
+      "price": "39.95"
+   },
+   
+   {
+      "@category": "web",
+	  "@cover": "paperback",
+      "title": {
+         "@lang": "en",
+         "#text": "The Joy of Web Development"
+      },
+      "author": "Lee Berners-Tim",
+      "year": "2019",
+      "price": "25.00"
+   }
+]
+

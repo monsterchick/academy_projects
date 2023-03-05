@@ -1,0 +1,80 @@
+/* Setup styles - provided */
+#studentcode{
+    overflow: auto;
+}
+
+.testSection{
+    padding: 4px;
+}
+
+#divCard{
+  width: 500px;
+}
+
+#divCard img{
+  width: 100%;
+}
+
+#secW3CSS{
+  position: relative;
+  top: 200px;
+}
+
+/* Positioning - for students to complete*/
+#secStatic {
+  position: static;
+  color: rgb(30, 0, 200);
+  border: 3px solid rgb(0, 110, 255);
+  background: rgb(139, 212, 246);
+  width: 300px;
+}
+
+#secRelative {
+  position: relative;
+  left: 100px;
+  color: rgb(12, 68, 2);
+  border: 3px solid rgb(115, 173, 33);
+  background: rgb(173, 246, 139);
+  width: 300px;
+}
+
+#secFixed {
+  position: fixed;
+  bottom: 300px;
+  right: 180px;
+  color: rgb(45, 2, 49);
+  border: 3px solid rgb(173, 33, 126);
+  background: rgb(246, 139, 237);
+  width: 300px;
+}
+
+#secAbsolute {
+  position: absolute;
+  top: 240px;
+  left: 330px;
+  color: rgb(38, 39, 1);
+  border: 3px solid rgb(173, 140, 33);
+  background: rgb(230, 248, 128);
+  width: 300px;
+}
+
+#divFloatLeft {
+  float: left;
+  border: 3px solid rgb(117, 33, 173);
+  background: rgb(214, 188, 221);
+}
+
+#divFloatRight {
+  float: right;
+  border: 3px solid rgb(117, 33, 173);
+  background: rgb(214, 188, 221);
+}
+
+#divRotate {
+  position: relative;
+  top: 130px;
+  transform: rotate(20deg);
+  border: 3px solid rgb(173, 33, 75);
+  background: rgb(221, 188, 198);
+  width: 300px;
+}

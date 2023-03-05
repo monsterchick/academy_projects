@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Home Page Tests</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navMain">
+            <a href="index.html">Home</a> |
+            <a href="wwwintro.html">WWW Intro</a> |
+            <a href="htmlstructure.html">HTML Structure</a> |
+            <a href="htmlcontent.html">HTML Content</a> |
+            <a href="dataimport.html">Data Import Formats</a> |
+            <a href="csspart1.html">CSS Part 1</a> |
+            <a href="csspart2.html">CSS Part 2</a> |
+            <a href="design.html">Design Issues</a>
+        </nav>
+        <img id="bannerMain" src="images/bannerLead.jpg" alt="Banner" >
+    </header>
+    <div id="divContent">
+    <section id="sectionMain">
+        <h1>Welcome To The POP Site</h1>
+        <h2>Introduction</h2>
+        <p id="pIntro1" class="pIntro">
+            This web site is designed to be used for your POP lab tasks. 
+            It is quite unusual to start from scratch with coding projects and even when developers do start a brand new project they will tend to use templates and frameworks rather than build everything themselves. 
+        </p>
+        <p id="pIntro2" class="pIntro">
+           When you write html code you will be asked to write it inside a section which will be emphaised as below:
+        </p>
+
+
+        <section id="practicearea">
+            <h2>Kwan Ho Lin</h2>
+                
+        </section>
+
+
+        <!--Write your code in here to pas the tests-->
+        <section id="studentcode">
+            <h2>s5087186</h2>
+            <p id="greeting1">Hello World!</p>
+            <p id="greeting2">Hello Again!</p>
+    
+        </section>
+    </section>
+    <aside id="asideMain">
+        <div id="divAsideHeight">
+            <h2>Tips/Links</h2>
+            <p>Some initial tips and resources links will appear here. You are encouraged to add your own as you progress through you lab tasks.</p>
+            <p><em>Tip: Unless explicitly instructed, do not change any code outside of the student code section.</em></p>
+        </div>
+    </aside>
+    </div>
+    <footer id="footerMain">
+        <nav id="navFooter">
+            <a href="index.html">Home</a> |
+            <a href="wwwintro.html">WWW Intro</a> |
+            <a href="htmlstructure.html">HTML Structure</a> |
+            <a href="htmlcontent.html">HTML Content</a> |
+            <a href="dataimport.html">Data Import Formats</a> |
+            <a href="csspart1.html">CSS Part 1</a> |
+            <a href="csspart2.html">CSS Part 2</a> |
+            <a href="design.html">Design Issues</a>
+        </nav>
+    </footer>
+    
+    <h2>Lab Task Tests</h2>
+        <p>At the bottom of the page there will be some test indicators. They will start off red/fail but as you correctly complete lab tasks they wil turn blue to indicate success.</p>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+    <script src="scripts/testsIntro.js"></script>
+</body>
+
+</html>

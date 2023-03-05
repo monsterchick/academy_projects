@@ -1,0 +1,7 @@
+# The readme file 
+
+This is the default file to be displayed when viewing a repo online. It can be used to communicate information and instructions etc. So if there is a readme file take a look at it.
+
+## The HTMLContent Site
+This repo contains the starter code for the HTMl Content and Data Files coding tasks for the POP unit 
+

@@ -1,0 +1,121 @@
+/*Selectors*/
+/*Simple*/
+
+/*element*/
+b{
+    color: #0000ff;
+    background-color: yellow;
+}
+
+/*ID*/
+#cssID{
+    color: rgb(127, 127, 127);
+    border: #0000ff 3px;
+    border-style: dashed;
+}
+
+/*Class*/
+.cssArea1Class1{
+    text-align: center;
+}
+
+/*Element + Class*/
+p.cssArea1Class2{
+    background-color: rgba(0,255,0,0.2);
+}
+
+/*Combinator*/
+/**/
+#divSibling ~ p{
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/*Pseudo-Class*/
+a:hover{
+    color: #ff0000;
+    background-color: #ffff00;
+    font-family: serif;
+}
+
+/*Pseudo-Elements*/
+#firstLine::first-line{
+    font-variant: small-caps;
+}
+
+/*Attributes*/
+#cssAttribute[target="_blank"]{
+    font-size: 1.5em;
+}
+
+/*Colors*/
+
+#namedColor{
+    color: tomato;
+}
+
+#hexColor{
+    color: #ff00ff;
+}
+
+#rgbColor{
+    color: rgb(33, 189, 6);
+}
+
+#rgbaColor{
+    color: rgba(33, 189, 6, 0.3);
+}
+
+#hslColor{
+    color: hsl(266, 100%, 50%);
+}
+
+#hslaColor{
+    color: hsla(266, 100%, 50%,0.3);
+}
+
+/*lists*/
+
+ol{
+    font-family: Verdana;
+    background-color: #669977;
+    padding: 20px;
+}
+
+ol li {
+    background: #a9e0a9;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+li.highlighted{
+    color: white;
+    background-color: black;
+}
+
+/*tables*/
+
+#bands {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 700px;
+  }
+  
+#bands td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #669977;
+  }
+  
+#bands tr:nth-child(even){background-color: #f2f2f2;}
+  
+/* this overrides color in th above */
+  #bands th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #669977;
+    color: white;
+  }

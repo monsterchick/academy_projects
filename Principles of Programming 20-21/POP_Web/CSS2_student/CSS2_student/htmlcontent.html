@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>HTML Content Tests</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navMain">
+            <a href="index.html">Home</a> |
+            <a href="wwwintro.html">WWW Intro</a> |
+            <a href="htmlstructure.html">HTML Structure</a> |
+            <a href="htmlcontent.html">HTML Content</a> |
+            <a href="dataimport.html">Data Import Formats</a> |
+            <a href="csspart1.html">CSS Part 1</a> |
+            <a href="csspart2.html">CSS Part 2</a> |
+            <a href="design.html">Design Issues</a>
+        </nav>
+
+    </header>
+    <div id="divContent">
+        <section id="sectionMain">
+            <h1>HTML Content</h1>
+
+            <section id="practicearea">
+                <h2>Practice Area</h2>
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                        <th>Comments</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                        <td rowspan="2">Here are some comments.</td>
+                      </tr>
+                      <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Sum</td>
+                        <td colspan="2">$180</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+            </section>
+            
+            <section id="studentcode">
+                <h2>Student Code</h2>
+                <section id="textSection">
+                    <h3>Text Content</h3>
+                    <p id="paraText1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. <b>Leo vel orci porta non pulvinar neque</b>. Morbi tristique senectus et netus et malesuada fames ac turpis. Amet
+                        cursus sit amet dictum sit amet justo donec. Dis parturient montes nascetur ridiculus mus mauris. Malesuada fames ac
+                        turpis egestas. <del>Commodo quis imperdiet massa tincidunt nunc pulvinar. At tellus at urna condimentum mattis. Ac tortor
+                        dignissim convallis aenean.</del> Nunc sed augue lacus viverra vitae congue eu consequat ac. Et ultrices neque ornare aenean
+                        euismod elementum nisi quis. 
+                        <hr>Turpis cursus in hac habitasse. Elementum facilisis leo vel fringilla est ullamcorper eget.
+                        Dictum fusce ut placerat orci nulla pellentesque. Scelerisque viverra mauris in aliquam. Justo donec enim diam vulputate
+                        ut pharetra sit amet aliquam. Dictum non consectetur a erat nam at lectus urna.
+                        
+                    </p>
+                    <p id="paraText2">
+                        Ac ut <i>consequat semper viverra nam</i>. Vel pharetra vel turpis nunc eget lorem dolor sed viverra. Tortor at risus viverra
+                        adipiscing. Dui faucibus in ornare quam viverra orci sagittis eu. Vulputate dignissim suspendisse in est ante in nibh
+                        mauris. Elementum curabitur vitae nunc sed velit. Proin sed libero enim sed faucibus. Nibh tellus molestie nunc non
+                        blandit massa. Volutpat diam ut venenatis tellus in metus. Volutpat consequat mauris nunc congue nisi vitae suscipit.
+                        Nulla malesuada pellentesque elit eget gravida cum sociis. Pharetra diam sit amet nisl suscipit. Neque viverra justo nec
+                        ultrices dui. Purus in mollis nunc sed<sub>id</sub>. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. Morbi tristique
+                        senectus et netus et malesuada fames. <br>Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Sed ullamcorper
+                        morbi tincidunt ornare massa. Quam id leo in vitae turpis massa sed elementum tempus. Turpis massa tincidunt dui ut
+                        ornare lectus sit amet est.
+                    </p>
+                </section>
+                <section id="listSection">
+                    <ol id="ol1" type="I">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                    </ol>
+                </section>
+                <section id="imageSection">
+                    <img id="image1" src="images/sunset1.jpg" width="50%">
+
+                </section>
+                <section id="linkSection">
+                    <a href="https://www.bournemouth.ac.uk" id="link1">BU site</a>
+                    <a href="#textSection" id="link2">Internal link</a>
+                </section>
+                <section id="tableSection">
+                    <table id="table1">
+                        <tr><td>R1C1</td><td>R1C2</td><td>R1C3</td></tr>
+                        <tr><td>R2C1</td><td>R2C2</td><td>R2C3</td></tr>
+                        <tr><td>R3C1</td><td>R3C2</td><td>R3C3</td></tr>
+                    </table>
+                </section>
+                <section id="formSection">
+                    <form id="form1" method="GET" action="#">
+                        <input type="text" name="textInput" value="Hello World!"/><br>
+                        <select name="cards">
+                            <option value="hearts">Hearts</option>
+                            <option value="diamonds">diamonds</option>
+                            <option value="spades">spades</option>
+                            <option value="clubs">clubs</option>
+                        </select>
+                        <input type="submit">
+                    </form>
+                </section>
+                <section id="mediaSection">
+                <video id="video1" width="320" height="240" controls>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    <source src="videos/video1.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                </section>
+            </section>
+        </section>
+        <aside id="asideMain">
+            <div id="divAsideHeight">
+                <h2>Tips/Links</h2>
+                <q class="tip">Don't forget to backup you work on a regular basis.</q>
+                <q class="tip">Don't forget to use the Browser Developer Tools to help debug your code.</q>
+                <q class="tip">Don't forget to make sure your code is <a href="https://validator.w3.org/" target="_blank">validated</a></q>
+                <p><a href="https://www.w3schools.com/html/html5_syntax.asp" target="blank">W3Schools Coding Conventions</a></p>
+                <p><a href="https://loremipsum.io/generator/?n=2&t=p" target="_blank">Lorem ipsum Generator</a></p>
+                <p><a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C Validator</a></p>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="footerMain">
+        <nav id="navFooter">
+            <a href="index.html">Home</a> |
+            <a href="wwwintro.html">WWW Intro</a> |
+            <a href="htmlstructure.html">HTML Structure</a> |
+            <a href="htmlcontent.html">HTML Content</a> |
+            <a href="dataimport.html">Data Import Formats</a> |
+            <a href="csspart1.html">CSS Part 1</a> |
+            <a href="csspart2.html">CSS Part 2</a> |
+            <a href="design.html">Design Issues</a>
+        </nav>
+    </footer>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+    <script src="scripts/testsContent.js"></script>
+</body>
+
+</html>

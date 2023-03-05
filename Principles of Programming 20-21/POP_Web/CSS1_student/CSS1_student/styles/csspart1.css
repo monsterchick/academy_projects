@@ -1,0 +1,101 @@
+b {
+  color: #0000FF;
+  background-color: yellow;
+}
+
+#cssID {
+  color: rgb(127,127,127);
+  border: 3px #0000FF;
+  border-style: dashed;
+}
+
+p.cssArea1Class1 {
+  text-align: center;
+}
+
+p.cssArea1Class2 {
+  background-color: rgba(0,255,0,0.2);
+}
+
+#divSibling,div ~ p {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+#pseudoClass, a:hover {
+  color: #ff0000;
+  background-color: #FFFF00;
+  font-family: serif;
+}
+
+#firstLine,p::first-line {
+  font-variant: small-caps;
+}
+
+#cssAttribute[target="_blank"] 
+{
+  
+  font-size: 1.5em;
+}
+
+#namedColor {
+  color: tomato;
+}
+#hexColor {
+  color: #FF00FF;
+}
+#rgbColor {
+  color: rgb(33,189,6);
+}
+#rgbaColor {
+  color: rgba(33, 189, 6, 30%);
+}
+#hslColor {
+  color: hsl(266, 100%, 50%)
+}
+#hslaColor {
+  color: hsla(266, 100%, 50%, 30%);
+}
+
+#cssOL {
+  font-family: Verdana;
+  background-color: #669977;
+  padding: 20px;
+}
+
+li {
+  background-color: #a9e0a9;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+li.highlighted {
+  color: white;
+  background-color: black;
+}
+
+#bands {
+  font-family: sans-serif;
+  border-collapse: collapse;
+  width: 700px;
+}
+
+#bands td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: #669977;
+}
+
+#bands th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #669977;
+  color: white;
+}
+
+#bands tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
