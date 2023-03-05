@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>participant portal</title>
+    <link rel="stylesheet" href="/static/css/participant.css">
+</head>
+<body>
+    <div>
+        <a href="/">
+            <img id="logo" src="/static/img/logo.png" alt="logo">
+        </a>
+    </div>
+    <h1>{{greeting}}</h1>
+    
+    <div>
+        <input type="button" value="Events">
+        <a href="/edit_profile">
+            <input type="button" value="Edit profile">
+        </a>
+        <a href="/basket">
+            <input type="button" value="Basket">
+        </a>
+            <a href="/">
+            <input type="button" value="Logout"><br>
+        </a>
+    </div>
+        <form>
+            <div>
+                <h3>Events Account Details</h3>
+                
+            </div>
+
+            <div>
+                <label>name</label>
+                <input type="text" placeholder="new name"><br>
+                <label>user address</label>
+                <input type="text" placeholder="new address"><br>
+                <label>DOB</label>
+                <input type="text" placeholder="new DOB">
+            </div>
+            <div>
+                <label>visa</label>
+                <input type="text"><br>
+                <input type="submit" value="update">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="/static/js/host_portal.js"></script>
+</html>
