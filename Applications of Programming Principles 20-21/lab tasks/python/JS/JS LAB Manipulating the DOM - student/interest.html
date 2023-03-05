@@ -1,0 +1,25 @@
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Loan Calculator</title>
+	<link type="text/css" rel="stylesheet" href="css/interest.css" ></link>
+	<script type="text/javascript" src="js/interest.js"></script>
+</head>
+<body>
+	<form name="loandata">
+		<span class="title">Enter Loan Information</span><br />
+		1) Amount of the loan:
+		<input type="text" id="principal" onchange="calculate();" /><br />
+		2) Annual percentage rate of interest:
+		<input type="text" id="interest" onchange="calculate();" /><br />
+		3) Repayment period in years:
+		<input type="text" id="years" onchange="calculate();" /><br />
+		<input type="button" value="Compute" onclick="calculate();" /><br />
+		<span class="title">Payment Information</span><br />
+		Your monthly payment:&pound;<span class="result" id="payment"></span><br />
+		Your total payment:&pound;<span class="result" id="total"></span><br />
+		Your total interest payments:&pound;<span class="result" id="totalinterest"></span>
+	</form>
+</body>
+</html>

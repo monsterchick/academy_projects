@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>APP JavaScript and the DOM </title>
+
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+  
+  <!-- Style sheets -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" >
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.20.0.css">
+  <link rel="stylesheet" href="css/shopping_list.css">
+  
+  <!-- Javascript - this one must be at the top for QUnit to work-->
+  <!-- See others below including labtask.js -->
+  <script src="js/qunit-1.21.0.js"></script>
+ 
+</head>
+<body>
+	<div id="main">		
+		<!-- HEADER -->
+		<header>  
+			<div id="banner">
+				<div id="welcome">
+					<h3 id="unit_title">APP JavaScript and the DOM</h3>
+				</div><!--close welcome-->		
+			</div><!--close banner-->
+		</header>
+		
+		<!-- SITE CONTENT -->
+		<div id="site_content">		
+		
+			<div id="strapline">
+				<div id="welcome_slogan">
+					<h3>Unit Test Your JavaScript</h3>
+				</div><!--close welcome_slogan-->
+			</div><!--close strapline--> 
+			
+			<div id="content">
+				<div class="content_item">
+					<h1>Edit the labtask.js file into the js directory and this page will unit test your JavaScript functions</h1> 
+					<div class="content_container">
+						<div  id="qunit"><p>QUnit will write into this div</p></div>
+					</div><!--close content_container-->
+				</div><!--close content_item-->
+
+			</div><!--close content--> 
+						
+		</div><!--close site_content-->  	
+		<!-- effected page elements below --> 
+		<div id="shop_banner">
+			<div id="shop_name">
+				<h1> Bobs Groceries</h1>
+			</div>
+				<h3 id="shop_usp">Good value. Low prices</h3>
+				<p id="homemade">See the hot offers in our homemade range</p>
+		</div>	<!--end shop banner-->  
+		
+		<!--shop page-->  
+		<div id="page">
+			<ul id="groceries">
+				<li id="one" class="hot"><em>new</em> range of paninis</li>
+				<li id="two" class="hot">soup</li>
+				<li id="three" class="cold">easy meal kits</li>
+				<li id="four" class="cold"><em>fresh</em> salad</li>
+				<li id="five" class="cold">yoghurt coated banana chips</li>
+			</ul>
+		</div><!--close page--> 
+		
+		<!--footer-->
+		<footer id="footer">
+			<p>The list example above is adapted from an example in code from <a href="http://javascriptbook.com/" target="_blank">http://javascriptbook.com/</a></p>
+		</footer>
+	</div><!--close main-->
+	
+	<!--SCRIPTS - javascript at the bottom for fast page loading -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/qunit_tests.js"></script>
+	<script type="text/javascript"src="js/labtask.js"></script>
+	<!--close scripts-->
+</body>
+</html>
