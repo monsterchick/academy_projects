@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>login</title>
+    <link rel="stylesheet" href="/static/css/login.css" >
+</head>
+<body>
+    <div>
+        <a href="/">
+            <img id="logo" src="/static/img/logo.png" alt="logo">
+        </a>
+    </div>
+    <form name="login" action="." method="post">
+
+        <h1>Login</h1>
+        <label>Email:</label>
+        <input id="inpUsr" type="text" name="email"><br>
+        <label>Password:</label>
+        <input id="inpPwd" type="text" name="password"><br>
+        <input id="btnLogin" type="submit" value="Login"><br>
+        <label>forgot password/username?</label><br>
+        <label id="lblToSignup">go to sign up</label><br>
+        <!-- test -->
+        <h1>{{email}}</h1>>
+        <h1>{{password}}</h1>>
+
+    </form>
+    <script src="/static/js/login.js"></script>
+</body>
+</html>
